@@ -90,7 +90,6 @@
 
           postInstall = ''
             wrapProgram "$out/bin/${pname}" \
-              --prefix PATH : "${pkgs.lib.makeBinPath [ pkgs.pop-launcher ]}" \
               --prefix LD_LIBRARY_PATH : ${
                 pkgs.lib.makeLibraryPath [ pkgs.vulkan-loader pkgs.libGL ]
               } \
